@@ -3272,7 +3272,7 @@ input[type="submit"].btn.btn-mini {
 @media (min-width: 980px) {
   .subnav-fixed {
     position: fixed;
-    top: 40px;
+    top: 0px;
     left: 0;
     right: 0;
     z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
@@ -5037,7 +5037,7 @@ a.badge:hover {
 }
 
 .hero-unit {
-  padding: 15px;
+  padding: 40px;
   margin-bottom: 30px;
   background-color: #eeeeee;
   -webkit-border-radius: 6px;
@@ -5047,7 +5047,7 @@ a.badge:hover {
 
 .hero-unit h1 {
   margin-bottom: 0;
-  font-size: 60px;
+  font-size: 40px;
   line-height: 1;
   letter-spacing: -1px;
   color: inherit;
