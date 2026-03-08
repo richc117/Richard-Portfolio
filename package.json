@@ -1,0 +1,13 @@
+{
+  "name": "richard-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Eleventy prototype for Richard Caballero portfolio",
+  "scripts": {
+    "dev": "eleventy --serve --input=src --output=dist",
+    "build": "eleventy --input=src --output=dist"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

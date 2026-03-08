@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: Writings
+description: Essays and short-form writing by Richard Caballero.
+---
+<section>
+  <h1>Writings</h1>
+  <p class="lead">
+    Essays, notes, and reflections on GIS, AI, design leadership, and technology.
+  </p>
+</section>
+
+<section>
+  <ul class="list">
+    {% for post in collections.writings | reverse %}
+      <li>
+        <article>
+          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <p class="meta">{{ post.data.date | formatDate }} · {{ post.data.form }}</p>
+          {% if post.data.summary %}
+            <p>{{ post.data.summary }}</p>
+          {% endif %}
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# OS files
+.DS_Store
+
+# Environment files
+.env
+.env.*
+
+# Editor settings
+.vscode/
+
+# npm logs
+npm-debug.log*
+
+# Planning/working docs (local only)
+SITE_BRIEF.md
+LINKS_LIBRARY.md
+PROTOTYPE_NOTES.md

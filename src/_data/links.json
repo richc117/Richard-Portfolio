@@ -1,0 +1,64 @@
+{
+  "talks": [
+    {
+      "title": "ArcGIS Pro SDK for .NET: Design Patterns for Add-ins and Managed Configurations",
+      "event": "Esri Developer & Technology Summit",
+      "date": "2026-10-04",
+      "location": "Palm Springs, California",
+      "url": "https://www.esri.com/en-us/about/events/devtech/overview",
+      "summary": "Design patterns for building ArcGIS Pro add-ins and focused managed configurations."
+    },
+    {
+      "title": "GIS, Information Architecture, and UX in Los Angeles",
+      "event": "World IA Day",
+      "date": "2023-03-04",
+      "location": "Pasadena, California",
+      "url": "https://worldiaday.org/talks/harnessing-power-synergy-gis-information-architecture-and-ux-los-angeles",
+      "summary": "Keynote on using IA, UX, and GIS to support transit and public infrastructure experiences."
+    }
+  ],
+  "publications": [
+    {
+      "title": "Geospatial and Path Analysis for Enhancing Malaria Control and Primary Healthcare Delivery in Low-Income Nations: A Case Study of Uganda",
+      "venue": "American Journal of Epidemiology and Infectious Disease",
+      "coauthors": "Maria Assumpta Komugabe, Itamar Shabtai, Zhaoxia Yi, Zachary Dodds",
+      "date": "2024-09-01",
+      "url": "https://www.researchgate.net/publication/384157249_Geospatial_and_Path_Analysis_for_Enhancing_Malaria_Control_and_Primary_Healthcare_Delivery_in_Low-Income_Nations_A_Case_Study_of_Uganda",
+      "summary": "Uses geospatial and path models to analyze malaria incidence and healthcare access drivers."
+    },
+    {
+      "title": "Advancing Malaria Prediction in Uganda through AI and Geospatial Analysis Models",
+      "venue": "Journal of Geographic Information System",
+      "coauthors": "Maria Assumpta Komugabe",
+      "date": "2024-04-01",
+      "url": "https://www.researchgate.net/publication/383084589_Advancing_Malaria_Prediction_in_Uganda_through_AI_and_Geospatial_Analysis_Models",
+      "summary": "Compares AI/GIS models for malaria prediction and identifies key incidence factors."
+    },
+    {
+      "title": "When Doing the Wrong Thing Is Right",
+      "venue": "Cognitive Science",
+      "coauthors": "David Kirsh, Shannon Cuykendall",
+      "date": "2012-01-01",
+      "url": "https://adrenaline.ucsd.edu/kirsh/Articles/Wrong_Right/WrongRight.pdf",
+      "summary": "Study of dance learning methods showing the effectiveness of marking compared with full-out practice."
+    }
+  ],
+  "mentions": [
+    {
+      "title": "World IA Day 2023 Los Angeles Talk with Richard Caballero",
+      "publication": "Medium",
+      "author": "Caroline Craner",
+      "date": "2023-07-07",
+      "url": "https://medium.com/worldiaday/world-ia-day-2023-los-angeles-talk-with-richard-caballero-b4465844f48b",
+      "summary": "Article discussing the role of GIS, IA, and UX in accessible transit systems."
+    },
+    {
+      "title": "Organizing a Conference for WIADLA23",
+      "publication": "DIA Design Guild",
+      "author": "DIA Design Guild Staff",
+      "date": "2023-05-23",
+      "url": "https://www.diadesign.io/case-studies/organizing-a-conference-for-wiadla23/",
+      "summary": "Conference recap that references Richard's participation and contributions."
+    }
+  ]
+}
