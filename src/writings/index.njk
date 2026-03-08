@@ -15,7 +15,7 @@ description: Essays and short-form writing by Richard Caballero.
     {% for post in collections.writings | reverse %}
       <li>
         <article>
-          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
           <p class="meta">{{ post.data.date | formatDate }} · {{ post.data.form }}</p>
           {% if post.data.summary %}
             <p>{{ post.data.summary }}</p>
