@@ -1,4 +1,6 @@
 module.exports = function (eleventyConfig) {
+  var pathPrefix = process.env.ELEVENTY_PATH_PREFIX || "/";
+
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({
     "src/assets/favicon/favicon.ico": "favicon.ico"
@@ -21,6 +23,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
+    pathPrefix: pathPrefix,
     dir: {
       input: "src",
       includes: "_includes",
