@@ -1,22 +1,5 @@
 module.exports = function (eleventyConfig) {
-  function resolvePathPrefix() {
-    if (process.env.ELEVENTY_PATH_PREFIX) {
-      return process.env.ELEVENTY_PATH_PREFIX;
-    }
-
-    if (process.env.GITHUB_ACTIONS === "true" && process.env.GITHUB_REPOSITORY) {
-      var parts = process.env.GITHUB_REPOSITORY.split("/");
-      var repo = parts[1] || "";
-      var owner = parts[0] || "";
-      if (repo && repo !== owner + ".github.io") {
-        return "/" + repo + "/";
-      }
-    }
-
-    return "/";
-  }
-
-  var pathPrefix = resolvePathPrefix();
+  var pathPrefix = process.env.ELEVENTY_PATH_PREFIX || "/";
 
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({
