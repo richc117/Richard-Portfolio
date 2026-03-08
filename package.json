@@ -4,8 +4,8 @@
   "private": true,
   "description": "Eleventy prototype for Richard Caballero portfolio",
   "scripts": {
-    "dev": "eleventy --serve --input=src --output=dist",
-    "build": "eleventy --input=src --output=dist"
+    "dev": "ELEVENTY_PATH_PREFIX=/ eleventy --serve --input=src --output=dist",
+    "build": "ELEVENTY_PATH_PREFIX=/Richard-Portfolio/ eleventy --input=src --output=dist"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
