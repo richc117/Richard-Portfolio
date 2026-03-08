@@ -1,0 +1,67 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+<section>
+  <p>
+    Richard Caballero is a Group Product Design Manager at Esri, where he leads
+    design across ArcGIS product areas spanning professional GIS, indoors,
+    enterprise management, graph data, and intelligence. His work connects
+    design, engineering, and product strategy across web, desktop, and mobile
+    products.
+  </p>
+  <p>
+    Richard's academic background bridges human cognition and computational
+    systems. He earned a B.S. in Cognitive Neuroscience from UC San Diego in
+    2010, and later completed an M.S. in Data Science and GIS from Claremont
+    Graduate University in 2023, where he was awarded the Esri Fellowship.
+  </p>
+  <p>
+    His current focus includes scaling design leadership across ArcGIS products,
+    integrating AI into professional GIS workflows, advancing cross-platform
+    design systems, and shaping graph and intelligence experiences through
+    strong product and engineering alignment.
+  </p>
+</section>
+
+<section>
+  <h2>Talks</h2>
+  <ul class="list">
+    {% for talk in links.talks %}
+      <li>
+        <article>
+          <h3><a href="{{ talk.url }}" target="_blank" rel="noopener noreferrer">{{ talk.title }}</a></h3>
+          <p class="meta">{{ talk.event }} · {{ talk.date | formatDate }}{% if talk.location %} · {{ talk.location }}{% endif %}</p>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Publications</h2>
+  <ul class="list">
+    {% for publication in links.publications %}
+      <li>
+        <article>
+          <h3><a href="{{ publication.url }}" target="_blank" rel="noopener noreferrer">{{ publication.title }}</a></h3>
+          <p class="meta">{{ publication.venue }} · {{ publication.date | formatDate }}</p>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Mentions</h2>
+  <ul class="list">
+    {% for mention in links.mentions %}
+      <li>
+        <article>
+          <h3><a href="{{ mention.url }}" target="_blank" rel="noopener noreferrer">{{ mention.title }}</a></h3>
+          <p class="meta">{{ mention.publication }} · {{ mention.date | formatDate }}{% if mention.author %} · {{ mention.author }}{% endif %}</p>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
