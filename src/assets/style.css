@@ -35,6 +35,12 @@ body {
   line-height: 1.72;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 a {
   color: var(--text);
   text-decoration-thickness: 1px;
@@ -136,6 +142,7 @@ a:focus-visible {
 }
 
 main {
+  flex: 1;
   padding: 2.6rem 0 3.2rem;
 }
 
