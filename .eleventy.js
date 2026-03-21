@@ -12,14 +12,26 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("formatDate", function (value) {
     if (!value) return "";
-    var parsed = value instanceof Date ? value : new Date(value);
-    if (isNaN(parsed.getTime())) return String(value);
 
-    return parsed.toLocaleDateString("en-US", {
+    var formatter = new Intl.DateTimeFormat("en-US", {
       year: "numeric",
       month: "short",
-      day: "2-digit"
+      day: "2-digit",
+      timeZone: "UTC"
     });
+
+    var parsed;
+    if (value instanceof Date) {
+      parsed = value;
+    } else if (typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value)) {
+      parsed = new Date(value + "T00:00:00Z");
+    } else {
+      parsed = new Date(value);
+    }
+
+    if (isNaN(parsed.getTime())) return String(value);
+
+    return formatter.format(parsed);
   });
 
   return {
