@@ -5,7 +5,8 @@
   "description": "Eleventy prototype for Richard Caballero portfolio",
   "scripts": {
     "dev": "ELEVENTY_PATH_PREFIX=/ eleventy --serve --input=src --output=dist",
-    "build": "ELEVENTY_PATH_PREFIX=/ eleventy --input=src --output=dist"
+    "build": "ELEVENTY_PATH_PREFIX=/ eleventy --input=src --output=dist",
+    "sync:writings": "./scripts/sync-obsidian-writings.sh"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
