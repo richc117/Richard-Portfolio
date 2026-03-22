@@ -1,8 +1,14 @@
 {
   "title": "Richard Caballero",
+  "shortTitle": "RC",
   "tagline": "Group Product Design Manager at Esri",
   "description": "Editorial portfolio focused on product design leadership, GIS, AI, and writing.",
   "email": "richard.caballerodesign@gmail.com",
+  "theme": {
+    "defaultMode": "warm-dark",
+    "color": "#15120f",
+    "appleStatusBarStyle": "black-translucent"
+  },
   "links": {
     "linkedin": "https://www.linkedin.com/in/ricaball/",
     "github": "https://github.com/richc117",
