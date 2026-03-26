@@ -11,17 +11,21 @@ description: Essays and short-form writing by Richard Caballero.
 </section>
 
 <section>
-  <ul class="list">
-    {% for post in collections.writings | reverse %}
-      <li>
-        <article>
-          <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
-          <p class="meta">{{ post.data.date | formatDate }} · {{ post.data.form }}</p>
-          {% if post.data.summary %}
-            <p>{{ post.data.summary }}</p>
-          {% endif %}
-        </article>
-      </li>
-    {% endfor %}
-  </ul>
+  {% if collections.writings and collections.writings.length %}
+    <ul class="list">
+      {% for post in collections.writings | reverse %}
+        <li>
+          <article>
+            <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+            <p class="meta">{{ post.data.date | formatDate }} · {{ post.data.form }}</p>
+            {% if post.data.summary %}
+              <p>{{ post.data.summary }}</p>
+            {% endif %}
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="lead">No writings published yet.</p>
+  {% endif %}
 </section>
