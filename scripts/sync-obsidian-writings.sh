@@ -22,6 +22,15 @@ fi
 
 mkdir -p "$TARGET_DIR"
 
+# Abort if source has no markdown files to avoid wiping essays on an empty or wrong path.
+if [[ -z "$(find "$SOURCE_DIR" -maxdepth 1 -type f -name "*.md")" ]]; then
+  echo
+  echo "No markdown files found in:"
+  echo "  $SOURCE_DIR"
+  echo "Nothing was changed."
+  exit 1
+fi
+
 # Sync published markdown files only. Keep the Eleventy index template in place.
 find "$TARGET_DIR" -maxdepth 1 -type f -name "*.md" -delete
 

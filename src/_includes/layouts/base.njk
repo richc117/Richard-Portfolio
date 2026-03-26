@@ -10,13 +10,12 @@
     <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
     <meta name="apple-mobile-web-app-status-bar-style" content="{{ site.theme.appleStatusBarStyle }}">
     <link rel="icon" href="{{ '/favicon.ico' | url }}?v=2" sizes="any">
-    <link rel="shortcut icon" href="{{ '/favicon.ico' | url }}?v=2">
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon/favicon.svg' | url }}?v=2">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ '/assets/favicon/favicon-96x96.png' | url }}?v=2">
     <link rel="apple-touch-icon" href="{{ '/assets/favicon/apple-touch-icon.png' | url }}">
     <link rel="manifest" href="{{ '/assets/favicon/site.webmanifest' | url }}">
     <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
-    <script src="{{ '/assets/theme.js' | url }}" defer></script>
+    <script src="{{ '/assets/theme.js' | url }}"></script>
   </head>
   <body>
     <header class="site-header">
@@ -24,7 +23,7 @@
         <a class="brand" href="{{ '/' | url }}">{{ site.title }}</a>
         <nav class="site-nav" aria-label="Primary">
           <a href="{{ '/' | url }}" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
-          <a href="{{ '/writings/' | url }}" {% if page.url == "/writings/" %}aria-current="page"{% endif %}>Writings</a>
+          <a href="{{ '/writings/' | url }}" {% if page.url.startsWith("/writings/") %}aria-current="page"{% endif %}>Writings</a>
           <label class="theme-switch" aria-label="Toggle color theme">
             <input id="theme-toggle" type="checkbox" role="switch" aria-label="Theme toggle">
             <span class="slider" aria-hidden="true"></span>
