@@ -221,6 +221,60 @@ p {
   margin-bottom: 1.4rem;
 }
 
+/* Figures in writing. These are diagrams rather than photographs, so they ship
+   as SVG: sharp at any zoom, and lighter than a raster of the same clarity. */
+figure {
+  margin: 2rem 0;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+figcaption {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.55;
+  margin-top: 0.55rem;
+}
+
+/* An <img> is sandboxed from this page's stylesheet, so one file cannot follow
+   the theme the way an inlined SVG would. Each figure ships in both palettes
+   and the theme chooses. */
+figure .on-sepia {
+  display: none;
+}
+
+:root[data-theme="sepia"] figure .on-dark {
+  display: none;
+}
+
+:root[data-theme="sepia"] figure .on-sepia {
+  display: block;
+}
+
+/* Two diagrams meant to be read against each other. Side by side while there
+   is width for it, stacked once each panel would be too small to compare. */
+.figure-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.figure-pair figcaption {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 480px) {
+  .figure-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 640px) {
   html,
   body {
